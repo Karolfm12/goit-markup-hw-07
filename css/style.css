@@ -26,6 +26,7 @@ body {
   font-weight: 500;
   line-height: 24px;
   color: rgba(46, 47, 66, 1);
+  /* overflow-x: hidden; */
 }
 
 .container {
@@ -122,8 +123,7 @@ img {
 }
 
 .featuressection .list {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
 }
 
 .icon {
@@ -155,6 +155,7 @@ img {
 /* SECTION2 */
 .skillssection {
   padding-bottom: 120px;
+  display: none;
 }
 
 .skillssection .listitem {
@@ -176,6 +177,11 @@ img {
   padding: 120px 0;
 }
 
+.ourteamsection .list {
+  display: block;
+  /* width: 100%; */
+}
+
 .teammember {
   background-color: #ffffff;
   width: calc((100% - 72px) / 4);
@@ -186,7 +192,7 @@ img {
 
 .memberdescription {
   padding: 32px 16px;
-  /* width: 100%; */
+  width: 100%;
 }
 .memberdescription .headerthree {
   text-align: center;
@@ -235,10 +241,13 @@ img {
 .customers {
   padding: 120px 0;
 }
-
+.customers .list {
+  display: flex;
+  flex-wrap: wrap;
+}
 .customer {
   height: 88px;
-  width: calc((100% - 120px) / 6);
+  width: calc((100% - 120px) / 2);
 }
 
 .customerlink {
@@ -370,22 +379,28 @@ img {
 
 /* RESPOSNSIVE */
 
-@media (min-width: 481px) and(max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1199px) {
   .container {
     margin: 0 auto;
     padding: 0 15px;
   }
-  .featuressection .list {
-    border: 1px solid red;
+  .featuressection .list,
+  .ourteamsection .list {
     display: flex;
     flex-wrap: wrap;
-    /* column-width: 40%; */
+
     width: 100%;
   }
-  .featuressection .listitem {
-    /* border: 1px solid red; */
-    /* width: calc((100% - 72px) / 4); */
-    width: 40%;
+  .featuressection .listitem,
+  .teammember {
+    width: calc((100% - 72px) / 2);
+  }
+  .customers .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .customer {
+    width: calc((100% - 120px) / 3);
   }
 }
 @media (min-width: 1200px) {
@@ -394,14 +409,41 @@ img {
     margin: 0 auto;
     padding: 0 15px;
   }
-  .featuressection .listitem {
-    /* border: 1px solid red; */
+  .featuressection .list,
+  .ourteamsection .list {
+    display: flex;
+    width: 100%;
+  }
+  .featuressection .listitem,
+  .teammember {
     width: calc((100% - 72px) / 4);
-    /* width: 100%; */
+  }
+  .skillssection {
+    display: block;
+  }
+  .customers .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .customer {
+    width: calc((100% - 120px) / 6);
+  }
+  .footercontainer {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+  }
+  .subscribebox {
+    display: flex;
+    gap: 24px;
+    padding: 20px 0 0 0;
+  }
+  .subscribebox .herobutton {
+    margin: 0 0;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
   .featuressection .listitem .icon {
     display: none;
   }
