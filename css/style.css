@@ -143,6 +143,8 @@ img {
   letter-spacing: 0.02em;
   color: var(--logo-span-color);
   margin-bottom: 8px;
+  margin-top: 8px;
+  text-align: center;
 }
 
 .paragraph {
@@ -175,16 +177,23 @@ img {
 .ourteamsection {
   background-color: #f4f4fd;
   padding: 120px 0;
+  margin: 0 auto;
 }
 
 .ourteamsection .list {
-  display: block;
-  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 80%; */
 }
 
 .teammember {
+  /* border: 1px solid red; */
+  width: 264px;
   background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4); */
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -244,6 +253,7 @@ img {
 .customers .list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .customer {
   height: 88px;
@@ -387,20 +397,45 @@ img {
   .featuressection .list,
   .ourteamsection .list {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 
     width: 100%;
+    /* padding: 0 150px; */
   }
-  .featuressection .listitem,
-  .teammember {
+
+  .featuressection .listitem {
     width: calc((100% - 72px) / 2);
+  }
+
+  .teammember {
+    width: 264px;
   }
   .customers .list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .customer {
     width: calc((100% - 120px) / 3);
+  }
+  .subscribefooterlabel .textbox {
+    max-width: 264px;
+  }
+  .footercontainer {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: baseline;
+    width: 100%;
+    gap: 40px;
+    padding: 0 108px;
+  }
+  .footer .socialicons {
+    padding: 20px 0 0 0;
   }
 }
 @media (min-width: 1200px) {
@@ -412,6 +447,7 @@ img {
   .featuressection .list,
   .ourteamsection .list {
     display: flex;
+    flex-direction: row;
     width: 100%;
   }
   .featuressection .listitem,
@@ -423,7 +459,8 @@ img {
   }
   .customers .list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
   }
   .customer {
     width: calc((100% - 120px) / 6);
@@ -440,6 +477,23 @@ img {
   }
   .subscribebox .herobutton {
     margin: 0 0;
+  }
+  .footerleft,
+  .footerright {
+    margin-right: 120px;
+    display: block;
+  }
+  .footersubscribe {
+    display: block;
+  }
+  .footer .socialicons {
+    padding: 20px 0 0 0;
+  }
+  .footer .paragraph {
+    margin-bottom: 16px;
+  }
+  .subscribefooterlabel .textbox {
+    width: 264px;
   }
 }
 
