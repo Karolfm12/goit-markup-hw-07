@@ -2,6 +2,7 @@
 @import url("header.css");
 @import url("footer.css");
 @import url("modal.css");
+@import url("menumobile.css");
 /* GLOBAL */
 * {
   padding: 0;
@@ -390,6 +391,22 @@ img {
 /* RESPOSNSIVE */
 
 @media (min-width: 769px) and (max-width: 1199px) {
+  .headernav {
+    width: 60%;
+  }
+
+  .headernav .list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .adress {
+    width: 40%;
+  }
+  .adress .list {
+    display: block;
+  }
+
   .container {
     margin: 0 auto;
     padding: 0 15px;
@@ -439,6 +456,23 @@ img {
   }
 }
 @media (min-width: 1200px) {
+  .headernav {
+    width: 60%;
+  }
+
+  .headernav .list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .adress {
+    width: 40%;
+  }
+  .adress .list {
+    display: flex;
+
+    justify-content: space-between;
+  }
   .container {
     width: 1158px;
     margin: 0 auto;
