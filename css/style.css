@@ -123,12 +123,21 @@ img {
   padding: 120px 0;
 }
 
+.featuressection .container {
+  display: flex;
+  justify-content: center;
+}
+
 .featuressection .list {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 72px;
   margin: 0 16px;
+}
+
+.featuressection .listitem {
+  width: 396px;
 }
 
 .icon {
@@ -255,6 +264,10 @@ img {
 .customers {
   padding: 120px 0;
 }
+.customers .headertwo {
+  margin-bottom: 0;
+}
+
 .customers .list {
   display: flex;
   flex-wrap: wrap;
@@ -262,7 +275,9 @@ img {
 }
 .customer {
   height: 88px;
-  width: calc((100% - 120px) / 2);
+  /* width: calc((100% - 120px) / 2); */
+  width: 190px;
+  margin-top: 72px;
 }
 
 .customerlink {
@@ -421,24 +436,52 @@ img {
     flex-wrap: wrap;
     justify-content: center;
 
-    width: 100%;
+    /* width: 100%; */
     /* padding: 0 150px; */
+  }
+  .featuressection .list {
+    gap: 8px;
   }
 
   .featuressection .listitem {
-    width: calc((100% - 72px) / 2);
+    /* width: calc((100% - 72px) / 2); */
+    width: 356px;
+  }
+  .ourteamsection .list {
+    padding: 0 108px;
   }
 
   .teammember {
+    /* width: calc((100% - 240px) / 2); */
     width: 264px;
+  }
+  .customers {
+    padding: 96px 0;
+  }
+  .customers .container {
+    display: flex;
+    width: 768px;
+    /* margin: 96px 0; */
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    /* gap: 96px; */
   }
   .customers .list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    /* justify-content: flex-end; */
+    align-items: center;
     justify-content: center;
+    gap: 24px;
+  }
+  .customers .headertwo {
+    margin-bottom: 0;
   }
   .customer {
-    width: calc((100% - 120px) / 3);
+    /* width: calc((100% - 120px) / 3); */
+    width: 168px;
+    margin-top: 72px;
   }
   .subscribefooterlabel .textbox {
     max-width: 264px;
@@ -448,7 +491,7 @@ img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
     align-items: baseline;
     width: 100%;
     gap: 40px;
@@ -510,6 +553,9 @@ img {
     gap: 24px;
     flex-wrap: wrap;
   }
+  .customers .headertwo {
+    margin-bottom: 0;
+  }
   .customers .list {
     display: flex;
     flex-direction: row;
@@ -522,6 +568,7 @@ img {
     display: flex;
     align-items: baseline;
     flex-direction: row;
+    gap: 0;
   }
   .subscribebox {
     display: flex;
