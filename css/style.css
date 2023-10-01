@@ -294,10 +294,12 @@ img {
 }
 
 .portfolio .list {
+  display: flex;
   list-style: none;
   justify-content: center;
   gap: 24px;
   margin-bottom: 72px;
+  flex-wrap: wrap;
 }
 
 .portfoliolist {
@@ -307,9 +309,6 @@ img {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
-}
-.portfolioitem {
-  width: calc((100% - 48px) / 3);
 }
 
 .portfoliolist .link {
@@ -548,6 +547,9 @@ img {
   }
   .subscribefooterlabel .textbox {
     width: 264px;
+  }
+  .portfolioitem {
+    width: calc((100% - 48px) / 3);
   }
 }
 
