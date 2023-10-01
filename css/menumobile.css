@@ -35,14 +35,17 @@
 }
 
 .menu-container {
-    
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background-color: #3f51b5;
+  background-color: rgba(255, 255, 255, 1);
   z-index: 999;
 
   transform: translateX(100%);
@@ -57,20 +60,54 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  color: #fff;
+  color: rgba(46, 47, 66, 1);
 }
 
 .mobile-menu {
-    
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .mobile-menu .link {
-    
   display: block;
   padding: 10px;
-  color: #fff;
+  color: rgba(46, 47, 66, 1);
   text-decoration: none;
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+.mobile-menu .link:hover {
+  color: rgba(64, 75, 191, 1);
+}
+
+.mobile-menu .active {
+  color: rgba(64, 75, 191, 1);
+}
+
+.menu-container .socialicons {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  padding: 64px 10px;
+}
+
+.mobiledown .adress .list {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+.mobiledown .adress .list .adreslink {
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-align: left;
 }

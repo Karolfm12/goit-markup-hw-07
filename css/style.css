@@ -124,7 +124,11 @@ img {
 }
 
 .featuressection .list {
-  display: block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 72px;
+  margin: 0 16px;
 }
 
 .icon {
@@ -184,9 +188,9 @@ img {
 .ourteamsection .list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
+  align-items: center;
+  gap: 72px;
   /* width: 80%; */
 }
 
@@ -454,6 +458,16 @@ img {
   .footer .socialicons {
     padding: 20px 0 0 0;
   }
+
+  .footersubscribe .paragraph {
+    align-self: flex-start;
+  }
+
+  .subscribebox {
+    display: flex;
+    align-items: baseline;
+    gap: 40px;
+  }
 }
 @media (min-width: 1200px) {
   .headernav {
@@ -475,14 +489,13 @@ img {
   }
   .container {
     width: 1158px;
-    margin: 0 auto;
     padding: 0 15px;
   }
-  .featuressection .list,
-  .ourteamsection .list {
+
+  .featuressection .list {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    /* width: 100%; */
   }
   .featuressection .listitem,
   .teammember {
@@ -490,6 +503,13 @@ img {
   }
   .skillssection {
     display: block;
+  }
+
+  .ourteamsection .list {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: wrap;
   }
   .customers .list {
     display: flex;
